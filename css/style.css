@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+  padding: 1rem;
+  background-color: #1A1110;
+}
+
+header{
+  width: 98%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main{
+  width: 98%;
+  height: 74%;
+}
+footer{
+  width: 98%;
+  height: 4%;
+}
+
+header,main,footer{ 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #31c694 ;
+  max-width: 1600px;
+  max-height: 1600px;
+  background-color: black;
+
+}
+header{
+  background-image: url("../assets/images/quizz.png");
+  background-size: contain;
+  background-repeat: space;
+  background-position: center;
+
+}
+
+
+
+h1{
+  font-size: 4.5em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+main p{
+  font-style: italic;
+  font-size: 1.5rem;
+  margin:2rem 0;
+  text-align: center;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+  padding: 1rem;
+  
+}
+
+
+
+
+.button-start {
+  background-image: linear-gradient(45deg, #31c694 , #36a3bf 50%, #74f293 100%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-start:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  .button-start {
+    padding: 0 2.6rem; 
+  }
+}
+
+
+
+/* Classes */
+.text-gradient {
+  color: #31c694; 
+  background-image: linear-gradient(45deg, #31c694 , #36a3bf 50%, #74f293 100%); 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
+
+
+/* Formulaire de connexion */
+
+main form label {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #31c694;
+  font-size: 1.8rem;
+  
+}
+main form input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #31c694;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  background-color: black;
+  color: #31c694;
+}
+
+main form button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #31c694;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  background-color: black;
+  color: #31c694;
+}
+
+main form input::placeholder {
+  color: #31c694;
+  opacity: 0.5;
+
+}
+
+main form button:hover {
+  background-color: #31c694;
+  color: black;
+}
+
+main form .error{
+  color: red;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  display: block;
+}
+main form .success{
+  color: green;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  display: block;
+}
+
+/* Question screen */
+
+main .question-header{
+  width: 100%;
+  height: 11%;
+  border : 2px solid #31c694;
+
+}
+main .question-main{
+  width: 100%;
+  height: 63%;
+  border : 2px solid #31c694;
+}
+main .question-answers{
+  width: 100%;
+  height: 35%;
+  border : 2px solid #31c694;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1%;
+  flex-wrap: wrap;
+}
+
+main .question-answers .answer{
+  width: 45%;
+  height: 45%;
+  border : 2px solid #31c694;
+  background-color: black;
+  color: #31c694;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  outline: none;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+main .question-answers .answer:hover{
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+  background-color: darkgreen;
+  color: #1A1110;
+  border : 5px double white;
+
+}
+
+
+
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: teal;
+}
